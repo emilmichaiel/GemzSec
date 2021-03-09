@@ -1,0 +1,16 @@
+<strong>Plain Text Analysis:</strong>
+<table class="table table-sm table-striped">
+  <tr>
+    <th scope="row">Number of Characters (including spaces)</th>
+    <td>{{plainText.length}}</td>
+  </tr>
+  <tr>
+    <th scope="row">Number of Characters (without spaces)</th>
+    <td>{{plainText | text: 'withoutSpaces'}}</td>
+  </tr>
+  <tr>
+    <th scope="row">Number of Words</th>
+    <td>{{plainText | text: 'numberOfWords'}}</td>
+  </tr>
+</table>
+

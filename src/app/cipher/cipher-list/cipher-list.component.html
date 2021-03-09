@@ -1,0 +1,6 @@
+<ul class="list-group">
+  <li *ngFor="let algo of cipherAlgos"
+      class="list-group-item pointer"
+      [routerLink]="algo.param"
+      routerLinkActive="active">{{algo.name}}</li>
+</ul>

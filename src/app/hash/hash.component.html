@@ -1,0 +1,21 @@
+<div class="row pad">
+  <div class="col-md-12">
+    <strong>Plain Text:</strong>
+    <textarea class="form-control" rows="5" [(ngModel)]="plainText"></textarea>
+    <button class="btn btn-primary" (click)="clearText()">clear</button>
+  </div>
+</div>
+<div class="row pad">
+  <div class="col-md-12">
+    <app-text [plainText]="plainText"></app-text>
+  </div>
+</div>
+<div class="row pad">
+  <div class="col-md-6" *ngFor="let hash of hashes; let i = index">
+    <strong>{{hash.method | uppercase}}: </strong>
+    <div *ngIf="hash.bits">
+      <input class="form-control" type="number" [(ngModel)]="hashes[i].bits" o placeholder="Bits">
+    </div>
+    <textarea class="form-control hash-border" rows="2">{{plainText | hash: hash.method : hash.bits}}</textarea>
+  </div>
+</div>
